@@ -50,7 +50,7 @@ set_alias() {
   alias gt="git reset"
   alias ge="git restore"
   alias gk="git cherry-pick"
-  alias gr="git rebase"
+  alias gr="git rebase --interactive"
 
   alias mr="make run"
   alias md="make debug"
