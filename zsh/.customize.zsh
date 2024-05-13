@@ -40,13 +40,22 @@ set_alias() {
 
   alias gp="git push"
   alias gl="git pull"
-  alias ga="git commit -a -m"
-  alias gs="git status"
   alias gc="git checkout"
+  alias gb="git branch"
+  
+  alias gg="git log"
+  alias gs="git status"
+  alias ga="git commit -a -m"
+
+  alias gt="git reset"
+  alias ge="git restore"
+  alias gk="git cherry-pick"
 
   alias mr="make run"
   alias md="make debug"
   alias mc="make clean"
+
+  alias sz="source ~/.zshrc"
 }
 set_alias
 
