@@ -19,7 +19,6 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 source "${ZINIT_HOME}/zinit.zsh"
 
-
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -57,7 +56,7 @@ zstyle ':fzf-table:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 alias ls='ls --color'
 alias c='clear'
-alias ss='source ~/.zshrc'
+alias sc='. ~/.zshrc'
 
 # eval "$(fzf --zsh)"
 eval "$(fzf)"
@@ -72,6 +71,6 @@ export PATH="$PATH:/opt/qemu-9.0.0/build"
 export PATH="$PATH:/opt/qemu-9.0.0/build/riscv64-sofmmu"
 export PATH="$PATH:/opt/qemu-9.0.0/build/rscv64-linux-user"
 
-# if [ -z "$TMUX" ]; then
-#       tmux attach || tmux new-session
-# fi
+if [ -z "$TMUX" ]; then
+      tmux attach || tmux new-session
+fi
