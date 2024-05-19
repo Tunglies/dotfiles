@@ -58,8 +58,7 @@ alias ls='ls --color'
 alias c='clear'
 alias sc='. ~/.zshrc'
 
-# eval "$(fzf --zsh)"
-eval "$(fzf)"
+eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
