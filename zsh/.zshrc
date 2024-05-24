@@ -8,7 +8,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
-export ALL_PROXY="192.168.43.71:7890"
+export ALL_PROXY="172.25.112.1:7890"
 eval "$(git config --global http.proxy ${ALL_PROXY})"
 eval "$(git config --global https.proxy ${ALL_PROXY})"
 
@@ -54,6 +54,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-table:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+alias vim='nvim'
 alias ls='ls --color'
 alias c='clear'
 alias sc='. ~/.zshrc'
@@ -71,5 +72,5 @@ export PATH="$PATH:/opt/qemu-9.0.0/build/riscv64-sofmmu"
 export PATH="$PATH:/opt/qemu-9.0.0/build/rscv64-linux-user"
 
 if [ -z "$TMUX" ]; then
-      tmux attach || tmux new-session
+      tmux attach || tmux new-session && cd ~
 fi
