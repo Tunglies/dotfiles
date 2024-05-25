@@ -14,14 +14,21 @@ export ALL_PROXY="172.25.112.1:7890"
 eval "$(git config --global http.proxy ${ALL_PROXY})"
 eval "$(git config --global https.proxy ${ALL_PROXY})"
 
-ALACRITTY_THEME="gruvbox_dark"
-ALACRITTY_HOME="$HOME/.config/alacritty/theme"
-if [ ! -d "$ALACRITTY_HOME" ]; then
-  mkdir -p "$(dirname $ALACRITTY_HOME)"
-  git clone https://mirror.ghproxy.com/https://github.com/alacritty/alacritty-theme "$ALACRITTY_HOME"
-fi
-export PATH="$ALACRITTY_HOME:$PATH"
+#if ps -p $$ | grep -q "alacritty" ; then
+#  ALACRITTY_THEME="gruvbox_dark"
+#  ALACRITTY_HOME="$HOME/.config/alacritty/theme"
+#  if [ ! -d "$ALACRITTY_HOME" ]; then
+#    mkdir -p "$(dirname $ALACRITTY_HOME)"
+#    git clone https://mirror.ghproxy.com/https://github.com/alacritty/alacritty-theme "$ALACRITTY_HOME"
+#  fi
+#  export PATH="$ALACRITTY_HOME:$PATH"
+#fi
 
+TPM_HOME="${HOME}/.tmux/plugins/tpm"
+if [ ! -d "$TPM_HOME" ]; then
+  mkdir -p "$(dirname TPM_HOME)"
+  git clone https://github.com/tmux-plugins/tpm "$TPM_HOME"
+fi
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share/zinit/zinit.git}"
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -35,6 +42,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light guillaumeboehm/zsh-copybuffer
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
@@ -72,7 +80,7 @@ alias sc='. ~/.zshrc'
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(alacritty msg config "$(cat ~/.config/alacritty/theme/themes/${ALACRITTY_THEME}.toml)")"
+#eval "$(alacritty msg config "$(cat ~/.config/alacritty/theme/themes/${ALACRITTY_THEME}.toml)")"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -82,6 +90,8 @@ export PATH="$PATH:/opt/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubu
 export PATH="$PATH:/opt/qemu-9.0.0/build"
 export PATH="$PATH:/opt/qemu-9.0.0/build/riscv64-sofmmu"
 export PATH="$PATH:/opt/qemu-9.0.0/build/rscv64-linux-user"
+
+tmux source $HOME/.tmux.conf
 
 if [ -z "$TMUX" ]; then
       tmux attach || tmux new-session && cd ~
