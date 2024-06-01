@@ -37,17 +37,4 @@ return {
       },
     },
   },
-  {
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {},
-  },
-  {
-    "sidebar-nvim/sidebar.nvim",
-    opts = {
-      open = true,
-      sections = { "diagnostics", "symbols", "git" },
-      todos = { ignored_paths = { "~" } },
-    },
-  },
-}
+  }
