@@ -8,4 +8,11 @@ return {
       todos = { ignored_paths = { "~" } },
     },
   },
+  {
+    "chomosuke/typst-preview.nvim",
+    version = "0.3.*",
+    build = function()
+      require('typst-preview').update()
+    end
+  }
 }

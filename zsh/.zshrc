@@ -84,7 +84,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+#
 export PATH="$PATH:/usr/lib/ccache/"
 export PATH="$PATH:/opt/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin"  
 export PATH="$PATH:/opt/qemu-9.0.0/build"
