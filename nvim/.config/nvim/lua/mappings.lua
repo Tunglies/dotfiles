@@ -2,6 +2,8 @@ require "nvchad.mappings"
 
 -- add yours here
 
+vim.opt.swapfile = false
+
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -20,3 +22,8 @@ map("n", "<leader>/", "gcc", { desc = "comment toggle", remap = true })
 map("v", "<leader>/", "gc", { desc = "comment toggle", remap = true })
 --
 map("n", "b", "<cmd>SidebarNvimToggle<CR>", opts)
+-- Navigate vim panes better
+map('n', '<c-k>', ':wincmd k<CR>')
+map('n', '<c-j>', ':wincmd j<CR>')
+map('n', '<c-h>', ':wincmd h<CR>')
+map('n', '<c-l>', ':wincmd l<CR>')
