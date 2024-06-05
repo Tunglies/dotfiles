@@ -22,8 +22,3 @@ map("n", "<leader>/", "gcc", { desc = "comment toggle", remap = true })
 map("v", "<leader>/", "gc", { desc = "comment toggle", remap = true })
 --
 map("n", "b", "<cmd>SidebarNvimToggle<CR>", opts)
--- Navigate vim panes better
-map('n', '<c-k>', ':wincmd k<CR>')
-map('n', '<c-j>', ':wincmd j<CR>')
-map('n', '<c-h>', ':wincmd h<CR>')
-map('n', '<c-l>', ':wincmd l<CR>')

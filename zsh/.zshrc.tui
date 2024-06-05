@@ -1,0 +1,5 @@
+export PATH="$PATH:/usr/lib/ccache/"
+export PATH="$PATH:/opt/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin"  
+export PATH="$PATH:/opt/qemu-9.0.0/build"
+export PATH="$PATH:/opt/qemu-9.0.0/build/riscv64-sofmmu"
+export PATH="$PATH:/opt/qemu-9.0.0/build/rscv64-linux-user"

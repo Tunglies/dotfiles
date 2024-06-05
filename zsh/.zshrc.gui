@@ -1,0 +1,10 @@
+if ps -p $$ | grep -q "alacritty" ; then
+ ALACRITTY_THEME="gruvbox_dark"
+ ALACRITTY_HOME="$HOME/.config/alacritty/theme"
+ if [ ! -d "$ALACRITTY_HOME" ]; then
+   mkdir -p "$(dirname $ALACRITTY_HOME)"
+   git clone https://mirror.ghproxy.com/https://github.com/alacritty/alacritty-theme "$ALACRITTY_HOME"
+ fi
+fi
+export PATH="$ALACRITTY_HOME:$PATH"
+eval "$(alacritty msg config "$(cat ~/.config/alacritty/theme/themes/${ALACRITTY_THEME}.toml)")"
