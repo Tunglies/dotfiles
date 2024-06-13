@@ -5,7 +5,7 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-#export LANG=ZH_CN.UTF-8
+export LANG=ZH_CN.UTF-8
 
 TPM_HOME="${HOME}/.tmux/plugins/tpm"
 if [ ! -d "$TPM_HOME" ]; then
