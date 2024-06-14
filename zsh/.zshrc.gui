@@ -6,3 +6,7 @@ if [ ! -d "$ALACRITTY_HOME" ]; then
 fi
 export PATH="$ALACRITTY_HOME:$PATH"
 eval "$(alacritty msg config "$(cat ~/.config/alacritty/theme/themes/${ALACRITTY_THEME}.toml)")"
+
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS=@im=fcitx5

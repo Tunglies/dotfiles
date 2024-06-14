@@ -4,7 +4,7 @@ if uname -a | grep -iq "wsl"; then
   eval "$(git config --global https.proxy ${ALL_PROXY})"
   source ~/.zshrc.tui
 else
-  export ALL_PROXY="192.168.50.250:7890"
+  export ALL_PROXY="127.0.0.1:7890"
   eval "$(git config --global http.proxy ${ALL_PROXY})"
   eval "$(git config --global https.proxy ${ALL_PROXY})"
   source ~/.zshrc.gui
