@@ -1,5 +1,16 @@
 [window]
 opacity = 0.85
+decorations = "None"
+dynamic_padding = true
+padding = { x = 10, y = 10}
+startup_mode = "SimpleFullscreen"
+
+[terminal]
+osc52 = "CopyPaste"
+
+# [mouse]
+# hide_when_typing = true
+
 
 [font]
 size = 12.0
