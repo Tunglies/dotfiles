@@ -8,13 +8,13 @@ return {
   --     todos = { ignored_paths = { "~" } },
   --   },
   -- },
-  {
-    "chomosuke/typst-preview.nvim",
-    version = "0.3.*",
-    build = function()
-      require('typst-preview').update()
-    end
-  },
+  -- {
+  --   "chomosuke/typst-preview.nvim",
+  --   version = "0.3.*",
+  --   build = function()
+  --     require('typst-preview').update()
+  --   end
+  -- },
   {
     "christoomey/vim-tmux-navigator",
     cmd = {

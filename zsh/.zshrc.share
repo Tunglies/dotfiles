@@ -8,7 +8,7 @@ if [ ! -d "$ZSH" ]; then
   git clone https://github.com/ohmyzsh/ohmyzsh "$ZSH"
 fi
 source $ZSH/oh-my-zsh.sh
-#export LANG=ZH_CN.UTF-8
+export LANG=ZH_CN.UTF-8
 
 TPM_HOME="${HOME}/.tmux/plugins/tpm"
 if [ ! -d "$TPM_HOME" ]; then

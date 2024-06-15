@@ -1,13 +1,14 @@
 [window]
 opacity = 0.85
-decorations = "None"
+title = ""
+# decorations = "None"
 dynamic_padding = true
 padding = { x = 10, y = 10}
 startup_mode = "SimpleFullscreen"
 
-[terminal]
-osc52 = "CopyPaste"
-
+# [terminal]
+# osc52 = "CopyPaste"
+#
 # [mouse]
 # hide_when_typing = true
 
