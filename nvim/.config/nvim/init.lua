@@ -25,12 +25,13 @@ require("lazy").setup({
     end,
   },
   { import = "plugins" },
-  { import = "custom" }
+  { import = "custom" },
 }, lazy_config)
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
+require("base46").toggle_transparency()
 
 require "nvchad.autocmds"
 

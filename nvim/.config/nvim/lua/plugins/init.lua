@@ -20,8 +20,8 @@ return {
     opts = {
       ensure_installed = {
         "clangd",
-        "rust_analyzer",
-        "ruff_lsp",
+        "rust-analyzer",
+        "ruff-lsp",
       },
     },
   },

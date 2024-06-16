@@ -6,8 +6,6 @@ local M = {}
 
 M.ui = {
   theme = "gruvchad",
-  transparency = true,
-
   statusline = {
     theme = "minimal",
     separator_style = "default",
