@@ -20,8 +20,6 @@ map("n", "WW", "<cmd>w<CR>")
 map("n", "<leader>/", "gcc", { desc = "comment toggle", remap = true })
 map("v", "<leader>/", "gc", { desc = "comment toggle", remap = true })
 
-map("n", "b", "<cmd>SidebarNvimToggle<CR>", opts)
-
 map("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>")
 map("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>")
 map("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>")
