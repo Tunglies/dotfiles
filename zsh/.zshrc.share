@@ -10,6 +10,8 @@ fi
 source $ZSH/oh-my-zsh.sh
 export LANG=ZH_CN.UTF-8
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 TPM_HOME="${HOME}/.tmux/plugins/tpm"
 if [ ! -d "$TPM_HOME" ]; then
   mkdir -p "$(dirname TPM_HOME)"

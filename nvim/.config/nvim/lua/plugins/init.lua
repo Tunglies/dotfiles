@@ -22,7 +22,7 @@ return {
         "clangd",
         "rust-analyzer",
         "ruff-lsp",
-        "ast-grep",
+        -- "ast-grep",
       },
     },
   },
