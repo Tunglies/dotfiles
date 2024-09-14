@@ -10,7 +10,7 @@ dynamic_padding = true
 padding = { x = 10, y = 10}
 startup_mode = "SimpleFullscreen"
 
-dimensions = { columns = 80, lines = 25}
+dimensions = { columns = 150, lines = 40 }
 
 # [terminal]
 # osc52 = "CopyPaste"
